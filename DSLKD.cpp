@@ -225,86 +225,86 @@ void printList(node *F) {
 }
 
 int main() {
-    // int n;
-    // cout << "Nhap so phan tu: ";
-    // cin >> n;
-    // node *F = NULL;
-    // int val;
-    // for (int i = 0; i < n; i++) {
-    //     cin >> val;
-    //     F = addTail(F, val);
-    // }
+    int n;
+    cout << "Nhap so phan tu: ";
+    cin >> n;
+    node *F = NULL;
+    int val;
+    for (int i = 0; i < n; i++) {
+        cin >> val;
+        F = addTail(F, val);
+    }
 
     //	1. Tìm số nút trong danh sách F có giá trị trường Info bé hơn một số
     // nguyên X cho trước.
-    // int X;
-    // cout << "Nhap X: ";
-    // cin >> X;
-    // cout << "So nut be hon " << X << ": " << countLessThanX(F, X);
+    int X;
+    cout << "Nhap X: ";
+    cin >> X;
+    cout << "So nut be hon " << X << ": " << countLessThanX(F, X);
 
     // 2. Chèn một nút có giá trị trường Info bằng X vào danh sách F đã được sắp
     // xếp theo thứ tự tăng dần của trường Info.
     // https://www.geeksforgeeks.org/given-a-linked-list-which-is-sorted-how-will-you-insert-in-sorted-way/
 
-    // int X2;
-    // cout << "Nhap X2: ";
-    // cin >> X2;
-    // node *nodeX = createNode(X2);
-    // sortAsc(F);
-    // sortedInsert(F, nodeX);
-    // printList(F);
+    int X2;
+    cout << "Nhap X2: ";
+    cin >> X2;
+    node *nodeX = createNode(X2);
+    sortAsc(F);
+    sortedInsert(F, nodeX);
+    printList(F);
 
     // 3. Xoá một nút có giá trị trường Info bằng X của danh sách F đã được sắp
     // xếp theo thứ tự tăng của trường Info.
-    // int X3;
-    // cout << "Nhap X3: ";
-    // cin >> X3;
-    // sortAsc(F);
-    // F = sortedDelete(F, X3);
-    // printList(F);
+    int X3;
+    cout << "Nhap X3: ";
+    cin >> X3;
+    sortAsc(F);
+    F = sortedDelete(F, X3);
+    printList(F);
 
     // 4. Tìm giá trị lớn nhất của trường Info của các nút thuộc danh sách F,
     // với giả thiết rằng danh sách F có ít nhất là một nút (F khác NULL).
-    // cout << "Gia tri lon nhat cua truong Info la: " << maxValueNode(F);
+    cout << "Gia tri lon nhat cua truong Info la: " << maxValueNode(F);
 
     // 5. Bổ sung 1 nút mới có giá trị trường Info bằng X vào cuối danh sách F.
-    // int X5;
-    // cout << "Nhap X5: ";
-    // cin >> X5;
-    // F = addTail(F, X5);
-    // printList(F);
+    int X5;
+    cout << "Nhap X5: ";
+    cin >> X5;
+    F = addTail(F, X5);
+    printList(F);
 
     // 6. Xoá nút cuối của danh sách F.
-    // F = deleteTail(F);
-    // printList(F);
+    F = deleteTail(F);
+    printList(F);
 
     // 7. Tìm địa chỉ của một nút thuộc danh sách F có giá trị trường Info
     // bằng X (nếu có), hoặc trả về giá trị NULL nếu tìm không có, trong 2
     // trường hợp sau:
-    // int X7;
-    // cout << "Nhap X7: ";
-    // cin >> X7;
+    int X7;
+    cout << "Nhap X7: ";
+    cin >> X7;
     // a) Danh sách F không được sắp xếp
-    // if (findAddress(F, X7) == NULL)
-    //     cout << "NULL" << endl;
-    // else
-    //     cout << findAddress(F, X7) << endl;
+    if (findAddress(F, X7) == NULL)
+        cout << "NULL" << endl;
+    else
+        cout << findAddress(F, X7) << endl;
 
     // b) Danh sách F được sắp xếp theo thứ tự tăng dần của trường Info.
     // sortAsc(F);
-    // if (findAddress(F, X7) == NULL)
-    //     cout << "NULL" << endl;
-    // else
-    //     cout << findAddress(F, X7);
+    if (findAddress(F, X7) == NULL)
+        cout << "NULL" << endl;
+    else
+        cout << findAddress(F, X7);
 
     // 8. In giá trị trường Info các nút của danh sách F theo thứ tự ngược (từ
     // nút cuối đến nút đầu).
-    // printReverse(F);
+    printReverse(F);
 
     // 9. Tạo ra một danh sách mới L (nút đầu trỏ bởi L) có dữ liệu trường Info
     // lần lượt được sao chép từ danh sách F.
-    // node *L = copyList(F);
-    // printList(L);
+    node *L = copyList(F);
+    printList(L);
 
     // 10. Cho trước 2 danh sách F1 và F2 đã được sắp xếp theo thứ tự tăng của
     // trường Info và lần lượt biểu diễn cho 2 tập hợp các số nguyên F1 và F2.
