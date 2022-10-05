@@ -225,7 +225,9 @@ node *getIntersection(node *F1, node *F2) {
 
     while (F1 != NULL) {
         if (isPresent(F2, F1->data)) {
-            res = addTail(res, F1->data);
+            if (!isPresent(res, F1->data)) {
+                res = addTail(res, F1->data);
+            }
         }
         F1 = F1->next;
     }
