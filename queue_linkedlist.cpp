@@ -28,6 +28,10 @@ int pop(Queue &queue) {
     int x = queue.bottom->data;
     TroNut p = queue.bottom;
     queue.bottom = queue.bottom->next;
+    if (queue.bottom == NULL) {
+        queue.top = NULL;
+    }
+
     delete p;
     return x;
 }
